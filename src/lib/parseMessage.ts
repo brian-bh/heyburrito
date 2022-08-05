@@ -16,7 +16,7 @@ function parseUsernames(text: string): string[] {
 }
 
 /**
- * @param { Obejct } msg slackmessage
+ * @param { Object } msg slackmessage
  * @param { array<object> } emojis emojis that we want to use. Comes from env
  * @return { object } { giver: string, updates:array<object> }
  *  - giver: sent from , ex => giver: USER1

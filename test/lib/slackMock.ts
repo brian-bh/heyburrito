@@ -1,7 +1,7 @@
 import { wbcList } from '../data/slackUsers'
 import { EventEmitter } from 'events';
 
-class RTMMock extends EventEmitter {
+class SocketMock extends EventEmitter {
 
     start() {
         return Promise.resolve(true);
@@ -22,6 +22,6 @@ class WebMock {
 }
 
 export {
-    RTMMock,
+    SocketMock,
     WebMock
 }
