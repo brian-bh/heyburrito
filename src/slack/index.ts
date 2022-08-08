@@ -11,6 +11,6 @@ const appToken = config.slack.app_token;
 const botToken = config.slack.bot_token;
 
 export default {
-    socket: slackMock ? new SocketMock() : new SocketModeClient({ appToken, logLevel: LogLevel.DEBUG }),
+    socket: slackMock ? new SocketMock() : new SocketModeClient({ appToken }),
     wbc: slackMock ? new WebMock() : new WebClient(botToken)
 };
