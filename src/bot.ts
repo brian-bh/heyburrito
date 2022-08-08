@@ -53,7 +53,7 @@ const handleBurritos = async (giver: string, updates: Updates[]) => {
         const burritos = await BurritoStore.givenBurritosToday(giver, 'from');
         const diff = dailyCap - burritos;
         if (updates.length > diff) {
-            notifyUser(giver, `You are trying to give away ${updates.length} burritos, but you only have ${diff} burritos left today!`);
+            notifyUser(giver, `${updates.length}개의 칭찬을 주려고 하셨지만, ${diff}개의 칭찬 밖에 남지 않았네요..!`);
             return false;
         }
         if (burritos >= dailyCap) {
@@ -69,7 +69,7 @@ const handleBurritos = async (giver: string, updates: Updates[]) => {
         const diffDec = dailyDecCap - givenRottenBurritos;
         if (incUpdates.length) {
             if (incUpdates.length > diffInc) {
-                notifyUser(giver, `You are trying to give away ${updates.length} burritos, but you only have ${diffInc} burritos left today!`);
+                notifyUser(giver, `${updates.length} 개의 칭찬을 주려고 하셨지만, ${diffInc} 개의 칭찬 밖에 남지 않았네요..!`);
             } else {
                 await giveBurritos(giver, incUpdates);
             }

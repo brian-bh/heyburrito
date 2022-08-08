@@ -24,7 +24,9 @@ class Socket extends EventEmitter {
 
     listener(): void {
         log.info('Listening on slack messages');
-        this.socket.on('message', (event: SlackEvent) => {
+        this.socket.on('message', ({ event, body, ack }) => {
+            ack();
+            // log.info('parsed message of ', event.type, event.subtype, event.text, event.channel)
             if ((!!event.subtype) && (event.subtype === 'channel_join')) {
                 log.info('Joined channel', event.channel);
             }
