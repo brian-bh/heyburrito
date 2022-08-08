@@ -45,10 +45,9 @@ Check environment variables section.
 ### Get started
 
 1. Go to https://yourworkspace.slack.com/apps and search for Bots.  
-2. Add **Bots ( Connect a bot to the Slack Real Time Messaging API)**.  
-3. Give the bot a name, ex: heyburrito, and obtain apiToken.  
-4. Choose how to run it => See Docker or Node section .
-5. Invite the new bot to your slack channels ( where u want to be able to send burritos ).
+2. Add **Bots ( Connect a bot to the Socket Mode)**, and get App Token (starts with xapp-), and Bot Token (starts with xoxb-)  
+3. Choose how to run it => See Docker or Node section .
+4. Invite the new bot to your slack channels ( where u want to be able to send burritos ).
 
 ### Docker
 1. Open and edit `docker-compose.yml`.
@@ -64,6 +63,15 @@ Check environment variables section.
 5. Set environment variables that you need / want. Check "Environment variables" for more details.
 6. `npm run start`
 
+### Caution
+You **must** provide emoji name without any **special symbols** like _ (underscore), + (plus) etc.
+You **must** provide small-capped **default bot name** which you can see at App Home from your app page at Slack API, not Display Name.
+
+### Necessary Permissions (OAuth & Permissions)
+users:read, users.profile:read, im:history, im:read, im:write, groups:history, emoji:read, chat:write, chat:write.public, channels:read, channels:join, channels:history, app_mentions:read, mpim:history
+
+### Necessary Bot Events (Event Subscriptions)
+app_mention, message.channels, message.groups, message.im, message.mpim, reaction_added, reaction_removed, team_join
 
 ### Environment Variables
 
