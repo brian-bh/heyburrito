@@ -75,7 +75,8 @@ Check environment variables section.
 | MONGODB_URL         |                                            | Yes*     | Only requierd if DATABASE_DRIVER is mongodb                       |
 | MONGODB_DATABASE    |                                            | Yes*     | Only requierd if DATABASE_DRIVER is mongodb                       |
 | DATABASE_URI        | MONGODB_URL/MONGODB_DATABASE               | No       | Only in use when DATABASE_DRIVER is mongodb                       |
-| SLACK_API_TOKEN     |                                            | Yes      | See Get started section                                           |
+| SLACK_APP_TOKEN     |                                            | Yes      | input tokens starts with xapp (for socket mode)                                           |
+| SLACK_BOT_TOKEN     |                                            | Yes      | input tokens starts with xoxb (for webapi)                                           |
 | SLACK_EMOJI_INC     | :burrito:                                  | No       | Emoji to increment points. ex:( :burrito: )                       |
 | SLACK_EMOJI_DEC     | :rottenburrito:                            | No       | Emoji to decrement points. ex:( :rottenburrito: )                 |
 | SLACK_DAILY_CAP     | 5                                          | No       | Defaults to 5/day .                                               |
